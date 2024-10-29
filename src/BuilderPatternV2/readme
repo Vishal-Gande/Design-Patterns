@@ -1,0 +1,8 @@
+This is version v2
+
+In this, we used method chaining to somewhat decrease dependency on builder class to initialise student object
+
+Problems:
+
+- From client, user can still initialise student object  - Student s2 = new Student(b);
+   Student s2 = new builder(b); this way of initialising objects should not be allowed
