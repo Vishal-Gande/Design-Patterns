@@ -1,0 +1,12 @@
+This is version v1
+
+This gives a basic understanding of how to use builder pattern
+
+We create two classes - Student : the production env, and builder: the staging env
+
+We do all the validation etc in builder class, and initialise the builder object... Once everything is ready, we use builder
+object to create a Student object.
+
+Problems with this approach:
+- Client will have to read extra documentation of builder class to create student class object. Ideally, reading student
+class docs should suffice to create a student object. In the next version, let's implement that.
