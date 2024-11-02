@@ -2,7 +2,7 @@ package SingletonPatternV1;
 
 public class Database {
 
-    public static Database database_instance = null ;
+    private static Database database_instance = null ;
     private Database() {
 
 

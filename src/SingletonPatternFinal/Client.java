@@ -1,9 +1,10 @@
-package SingletonPatternV2;
+package SingletonPatternFinal;
 
+public class Client {
 
-class Client {
 
     public static void main(String[] args) {
+
 
         //Database db_connection_0 = new Database(); Won't work as constructor is private
         Database db_connection_1 = Database.getInstance();
@@ -14,7 +15,6 @@ class Client {
 
         System.out.println(db_connection_1.hashCode());
         System.out.println(db_connection_2.hashCode());
+
     }
 }
-
-
