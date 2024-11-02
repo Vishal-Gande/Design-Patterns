@@ -1,4 +1,4 @@
-package SingletonPatternFinal;
+package Singleton.SingletonPatternFinal;
 
 public class Client {
 

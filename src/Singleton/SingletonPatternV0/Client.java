@@ -1,4 +1,4 @@
-package SingletonPatternV0;
+package Singleton.SingletonPatternV0;
 
 class Client {
 
@@ -20,8 +20,8 @@ class Client {
 
 /*
 Output:
-SingletonPatternV0.Database@6be46e8f
-SingletonPatternV0.Database@6be46e8f
+SingletonPattern.SingletonPatternV0.Database@6be46e8f
+SingletonPattern.SingletonPatternV0.Database@6be46e8f
 1810132623
 1810132623
 

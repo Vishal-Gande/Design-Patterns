@@ -1,4 +1,4 @@
-package BuilderPatternV1;
+package Builder.BuilderPatternV2;
 
 public class Student {
 
@@ -14,5 +14,11 @@ public class Student {
         this.gpa = b.gpa;
 
         System.out.println("Student object created successfully");
+    }
+
+    // has to be static as you're calling this class variable in client line no. 8
+    public static Builder getBuilder()
+    {
+        return new Builder();
     }
 }

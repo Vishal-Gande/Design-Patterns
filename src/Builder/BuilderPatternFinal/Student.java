@@ -1,4 +1,4 @@
-package BuilderPatternFinal;
+package Builder.BuilderPatternFinal;
 
 public class Student {
 

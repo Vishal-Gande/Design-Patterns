@@ -1,4 +1,4 @@
-package SingletonPatternV2;
+package Singleton.SingletonPatternV2;
 
 public class Database {
 

@@ -1,4 +1,4 @@
-package BuilderPatternV2;
+package Builder.BuilderPatternFinal;
 
 public class Client {
 

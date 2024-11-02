@@ -1,4 +1,4 @@
-package BuilderPatternV2;
+package Builder.BuilderPatternV1;
 
 public class Builder {
 
@@ -9,24 +9,16 @@ public class Builder {
     public double gpa;
 
 
-    public Builder setName(String name) {
+    public void setName(String name) {
         this.name = name;
-        return this;
     }
-    public Builder setAge(int age) {
+    public void setAge(int age) {
         this.age = age;
-        return this;
     }
-    public Builder setGpa(double gpa) {
+    public void setGpa(double gpa) {
         this.gpa = gpa;
-        return this;
     }
 
-    public Student build(){
-
-        // add code for validation and throw exceptions
-        return new Student(this);
-    }
     public boolean validateAttrs()
     {
         // add logic for false
