@@ -1,0 +1,41 @@
+Factory Design pattern:
+
+A method in an interface which return a new object of a corresponding interface
+
+When to use?
+
+Create objects without calling exact class.
+client code to be decoupled from specific classes, improving flexibility and scalability
+in cases where the type of the created object might change based on various factors.
+
+
+How to implement?
+Actual class code ----> Bank interface with methods. Icici/yesbank(Concrete classes) implement Bank interface
+Object creation : Factory code ---> Bank Factory interface with 'creation' method. IciciFactory/YesFactory(Concrete factory classes) implementing BankFactory
+As we're coding to the interfaces, we are decoupling the code from classes ---> extensibility improves.
+
+ChatGPT version:
+How to Implement
+
+	1.	Define Product Interface: Create an interface that declares common methods for all product types, such as Bank with methods like getBalance(), getAccount(), and createUpi(String upi).
+	2.	Implement Concrete Product Classes: Create classes that implement the product interface, e.g., Icici and YesBank classes implementing the Bank interface.
+	3.	Define Factory Interface: Create a factory interface with a method for creating objects. For example, BankFactory with a createBank() method.
+	4.	Create Concrete Factory Classes: Implement the factory interface with classes specific to each product, e.g., IciciFactory and YesBankFactory implementing the BankFactory interface.
+	5.	Use Factory in Client Code: In client code, instantiate objects through the factory interface rather than the concrete class, e.g., by calling BankFactory bankFactory = new YesBankFactory() and then Bank bank = bankFactory.createBank();.
+
+This approach ensures extensibility by decoupling the client code from specific classes and relying on interfaces instead.
+
+
+Pros
+
+	1.	Decoupling: The client code is decoupled from specific classes, making the application more modular and adaptable to changes.
+	2.	Single Responsibility Principle: Object creation logic is moved to a separate class, making code easier to maintain and extend.
+	3.	Scalability: New products can be added easily without modifying the client code.
+	4.	Encapsulation of Creation Logic: The pattern encapsulates the logic for object creation, allowing for flexibility in the type of object returned.
+
+Cons:
+
+	1.	Complexity: It can add complexity to the codebase by introducing more classes and interfaces.
+	2.	Increased Code Size: Every new product type requires a new concrete factory, which can lead to a large number of additional classes.
+	3.	Less Straightforward to Implement: The pattern may be overkill for simple applications where only a few object types are needed.
+	4.	Potential Overhead: If not managed carefully, it can create an unnecessary hierarchy of classes and interfaces, leading to maintenance challenges.
