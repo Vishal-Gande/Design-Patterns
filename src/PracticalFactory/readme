@@ -1,0 +1,21 @@
+This is "Practical Factory Design" - this is the most used design pattern.
+If someone says, implement factory DP --> mostly he/she means implement Practical Factory DP
+
+When to use?
+
+- Creation of objects based on user input(or some condition)
+
+
+Without PF DP, we wud simply have those switch cases or if-else conditions
+inside the """CLIENT""" class itself each time whenever(could be a 100 places)
+we're creating classes based on some condition.
+Issues with this approach:
+a) You have to add if-else conditions at each block
+b) Tomorrow if new class gets introduced, you will have to change existing
+    client code --> violates OCP
+c) You may forget to update client code whenever new classes get added
+
+
+How are we solving for above issues?  --> Practical Factory!
+Create a new dedicated class just for object creation, name it BirdFactory
+Have all the logic to create objects based on user input.
