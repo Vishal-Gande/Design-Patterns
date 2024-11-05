@@ -1,0 +1,9 @@
+This is AbstractFactory for GUI components
+
+UI components --> Button, checkbox, Menu are interfaces..
+
+Actual classes --> WindowsButton, MacButton implement them
+
+Factory related : (Responsible for creation of classes)
+GUI Factory: Has all required component creation methods --> createButton(),createCheckbox(), createMenu()
+Windows/MACFactory implement GUI Factory
