@@ -1,0 +1,16 @@
+This is Abstract factory pattern
+
+It provides an interface for creating families of related or dependent objects without specifying their concrete classes.
+This pattern is useful for creating multiple related objects in a single interface.
+
+How to implement?
+
+BankFactory interface: Has every type bank might 'create' - Savings/Investments/Credit
+Specific bank factories, like YesBankFactory implements BankFactory.
+
+Yesbankfactory will have methods to create objects of savingsacc, investacc, credit acc.
+
+Each of these accounts will have a 'class' (which implement their respective interfaces)
+for themselves - class yesbanksavings , yesbankinvest etc.
+
+which have the final specific implementation of how to create a savingsacc etc
