@@ -1,4 +1,4 @@
-package AbstractFactoryPattern;
+package FactoryDesignPatterns.AbstractFactoryBank;
 
 public class YesBankSavingsAccount implements SavingsAccount {
 

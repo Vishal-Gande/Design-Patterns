@@ -1,4 +1,4 @@
-package PracticalFactory;
+package FactoryDesignPatterns.PracticalFactory;
 
 public class Bird {
 

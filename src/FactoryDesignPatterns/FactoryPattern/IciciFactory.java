@@ -1,4 +1,4 @@
-package FactoryPattern;
+package FactoryDesignPatterns.FactoryPattern;
 
 public class IciciFactory implements BankFactory {
 

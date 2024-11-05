@@ -1,4 +1,4 @@
-package PracticalFactory;
+package FactoryDesignPatterns.PracticalFactory;
 
 import java.util.Scanner;
 

@@ -1,6 +1,4 @@
-package AbstractFactoryPattern;
-
-import FactoryPattern.YesBankFactory;
+package FactoryDesignPatterns.AbstractFactoryBank;
 
 public class Client {
 
