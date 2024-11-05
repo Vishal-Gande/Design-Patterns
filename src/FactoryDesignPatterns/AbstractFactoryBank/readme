@@ -13,4 +13,4 @@ Yesbankfactory will have methods to create objects of savingsacc, investacc, cre
 Each of these accounts will have a 'class' (which implement their respective interfaces)
 for themselves - class yesbanksavings , yesbankinvest etc.
 
-which have the final specific implementation of how to create a savingsacc etc
+which have the final specific implementation of how to create a savingsacc etc.
