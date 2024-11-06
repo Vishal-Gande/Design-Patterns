@@ -1,0 +1,36 @@
+Adapter design pattern
+
+When to use?
+
+You are dependent on third party libraries for some task
+Eg 1: for logging u could be dependent on
+        a) Log4j
+        b) logger type2
+        c) logger type 3
+Eg 2 : For receiving payments, u could depend on
+        a) RazorPay
+        b) PayU
+
+Your application(client) code cannot be tightly coupled with any of these external packages. coz, if
+one day one of them goes down, it will take forever to switch to other option.
+
+Solution : Code to an interface with standard methods - makePayment(), GenerateOTP() etc
+
+But you cannot expect third party libraries to implement your methods as is. They could have their
+own way, and their own methods. For instance, Razorpay might have otp(String DeviceType) method.
+
+How to solve this issue?
+Use adapters !!
+
+Think of Adapter from macbook docker example. Macbook has just one port - Type C.
+You connect various devices(HDMI, usb etc) through docker(Adapter), and then adaptor connects to Mac.
+What adaptor does is, it interacts with HDMI/USB, and then converts it to Type C, and feeds it to Mac.
+
+
+In this particular code, we're developing Payment gateway for clients of CureFit.
+
+Payment GW interface implemented by PayUAdapter, RazorpayAdapter
+PayU/Razorpay adaptors interact with their respective APIs writing their specific code.
+
+This way we're loosely coupled with external packages.
+
