@@ -1,0 +1,20 @@
+Strategy Design Pattern
+
+When to use?
+
+Whenever there are multiple ways to perform a behaviour, instead of coding the behaviour in the
+entity itself, create separate classes for each type of that behaviour
+
+Eg: Find path/route behaviour in G-Maps might have multiple implementations based on Mode of transport
+namely bike_route, car_route etc.. Create separate classes for each of them, and make them implement a
+common interface
+
+In this code,
+
+we have "PathCalculator" interface which all modes of transport - bike, car etc classes implement
+Additionally, we have added a PathCalculatorFactory class to create correct class based on user input
+depicting Practical design pattern
+
+
+
+
