@@ -1,0 +1,10 @@
+Flipkart's code without Observer Design pattern
+
+Issues:
+
+a) Tight coupling between classes Flipkart and services  --> Violates Dependency inversion
+b) To add a new service tomorrow, you will need to edit Flipkart's code --> OCP violation
+c) Scalability issues .. if new services get added, flipkart's constructor overloaded w parameters
+
+
+Let's solve for these issues with the help of Observer Design Pattern.
