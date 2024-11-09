@@ -1,6 +1,24 @@
---work in progress --
+*** Flipkart appln with Observer Design Pattern ***
 
-Flipkart appln with Observer Design Pattern
+# When to use Observer design pattern?
 
-When to use Observer design pattern?
+Whenever there's an occurrence of a special event, we have to call many external dependencies.
+Examples:
+1) Flipkart/Amazon order placed  ===> Notify courier partner, inventory management, Email/Mobile SMS service, Invoice gen
+2) Facebook post ==> Feed updates, Notification system, Search index update
+3) New student enrolled ==> Email allotment, Mentor assignment, Room allotment, SMS sender
+4) Banking transaction ===> Update balance, detect fraud, Notify user by SMS, Add transaction logs
 
+# How to use?
+
+1) Create an common interface --> OrderPlacedObserver and add a method onOrderPlaced()
+2) Ask all services - email, sms, courier etc implement this interface
+3) In client code, create a flipkart object, create services objects and pass 'flipkart' object to all services constructors.
+4) In Flipkart, add methods - addorderobserver, removeorderobserver.
+
+
+# Issues with earlier code without this design pattern are all solved now.
+
+1) Tight coupling ==> Flipkart class is decoupled w all services now, due to use of interface - orderplacedobserver
+2) OCP ==> new observers can be without changing existing code
+3) Scalability ==> We can now add/remove services as we're not feeding them to constructors
