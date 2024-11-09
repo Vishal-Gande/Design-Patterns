@@ -22,3 +22,33 @@ Examples:
 1) Tight coupling ==> Flipkart class is decoupled w all services now, due to use of interface - orderplacedobserver
 2) OCP ==> new observers can be without changing existing code
 3) Scalability ==> We can now add/remove services as we're not feeding them to constructors
+
+
+Few good practices while implementing observer pattern:
+1) Handle service failures
+    Eg: If email service goes down, appln shouldn't stop abruptly  ===> Use error handling
+
+    public void onOrderPlaced(Order order) {
+        for (OrderPlacedObserver observer : orderPlacedObservers) {
+            try {
+                observer.onOrderPlaced(order);
+            } catch (Exception e) {
+                // Handle or log the exception without affecting others
+                System.err.println("Error notifying observer: " + e.getMessage());
+            }
+        }
+    }
+
+2) Observer Management:
+    Provide methods to add and remove observers so that the subject’s observer list can be managed dynamically
+    Use addOrderPlacedObserver() and public void removeOrderPlacedObserver()
+
+3) Order of calling services
+    In certain systems, order matters. For eg: Document approvals
+    Initial review team -> Legal team -> Financial team -> Executive approval
+
+    How to implement ? Use Linkedlist to store observers, as u MUST traverse the ll sequentially
+
+4) Asynchronous calling of services:
+    Certain services might take longer than others, so u could use threads and call them asynchronously.
+
