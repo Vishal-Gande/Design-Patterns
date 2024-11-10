@@ -19,9 +19,9 @@ public class SBI {
 
     public void onTransaction(Transaction transaction){
         for(BankTransactionObservers observer : transactionObservers){
-            //Thread thread = new Thread(() -> observer.onTransaction(transaction));
-            //thread.start();
-            observer.onTransaction(transaction);
+            Thread thread = new Thread(() -> observer.onTransaction(transaction));
+            thread.start();
+            //observer.onTransaction(transaction);
         }
     }
 }
