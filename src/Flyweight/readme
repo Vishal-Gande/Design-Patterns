@@ -13,3 +13,8 @@ How to tackle this?
     Add a reference to above object in extrinsic object(via an attribute)
 
 By above way, we're re-using(sharing) the intrinsic properties among multiple objects, saving memory and load time
+
+In this particular example,
+Bullet class has all the intrinsic properties, and gets loaded at the game load time
+flyingbullet bullets are the actual bullets that get assigned to the player. all they store is coordinates, and
+a reference to the Bullet object.
