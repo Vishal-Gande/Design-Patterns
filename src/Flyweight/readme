@@ -1,0 +1,15 @@
+** FLyweight **
+
+Often we end up creating with classes that have 2 types of properties:
+a) Extrinsic --> that will change for every object
+b) Intrinsic --> That will not change
+
+Presence of intrinsic properties in every object leads to extra memory usage
+
+How to tackle this?
+
+    Divide the class into different classes -- One with intrinsic prop, one w extrinsic prop
+    Create an object for intrinsic class and store all values
+    Add a reference to above object in extrinsic object(via an attribute)
+
+By above way, we're re-using(sharing) the intrinsic properties among multiple objects, saving memory and load time
